@@ -294,6 +294,43 @@ One of the most powerful ways to influence the behaviour of a system is through 
 
 The way out is to specify indicatiors and goals that reflect the real welfare of the system.
 
+## Leverage Points - Places to Intervene in a System
+
+Leverage points are places in the system where a small change could lead to a large shift in behaviour.
+
+People involved in a system often know intuitively where the leverage points are but push in the wrong direction.
+
+Stocks that are big relative to their flows are more stable, they have large buffers. You can make a system more stable by increasing buffers but if they are too big the system becomes hard to change. And buffers can have costs - inventory.
+
+The only way to fix a system that is laid out poorly is to rebuild it.
+
+Delays in feedback processes are points of high leverage but are often not easy to change.
+
+The strength of balancing feedback loops can be a leverage point. These are important relative to the strength of the effect they are designed to correct. If the effect increases in strength, we must increase the strength of the feedback loop.
+
+Reinforcing feedback loops can be strong leverage points. use these before reinforcing ones.
+
+Information flows.
+
+Rules.
+
+Self-organising.
+
+Goals.
+
+Paradigms are the mindset from which systems arise. If they can be changed the leverage is very high. Systems modellers try to do that by building a model of the whole system and being able to see it from the outside.
+
+The ultimate leverage is to transcend paradigms.
+
+
+
+
+
+
+
+
+
+
 
 
 
