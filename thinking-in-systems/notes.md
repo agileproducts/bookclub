@@ -322,6 +322,34 @@ Paradigms are the mindset from which systems arise. If they can be changed the l
 
 The ultimate leverage is to transcend paradigms.
 
+## Living in a world of systems
+
+There's a big difference between understanding how to fix a system and actually doing it. Implementation is hard.
+
+Social systems are human and don't simply react to command.
+
+You can only make a complex system do what you want temporarily at best. We have to acknowledge the uncertainties.
+
+We can't control systems, but we can dance with them.
+
+Key lessons:
+
+* **Get the beat of the system**. Before you disturb it, watch how it behaves. Get the data, the history.
+* **Make your mental models explicit**. The act of setting them out is clarifying. Show others your model, enable them to challenge it. Test against the evidence.
+* **Distribute information**. Many problems with systems come back to lack of information. Don't hide or distort it.
+* **Use the right language**. Use language precisely and make it shared. Apply systems analysis terms correctly.
+* **Pay attention to what is important and not just what is quantifiable**. Pretending something doesn't exist if it is hard to quantify leads to faulty models. Use qualitative data.
+* **Make feedback policies for feedback systems** Have policies that change based on the state of the system.
+* **Go for the good of the whole**. Remember that hierarchies exist to serve the bottom layers. Don't maxmimise subsystems at the expense of the whole.
+* **Listen to the wisdom of the system**. Help the system run itself, remember the intervenor's dilemma. 
+* **Locate responsibility in the system**. Look for how the system creates its own behaviour. Design systems to have intrinsic responsibilty so that the decision makers receive feedback about the consequences of decisions.
+* **Stay humble, keep learning**. When you don't know, learn, experiment. Enbrace errors.
+* **Celebrate complexity**. Don't force oversimplification.
+* **Expand time horizons**. Watch the long term as well as the short term.
+* **Defy the disciplines**. Take a broad view, don't decompose into narrow perspectives.
+* **Expand the boundary of caring**. Understand interconnections.
+* **Don't erode the goal of goodness**. Beware the drift to low performance. Keep standards absolute. Don't let bad news outweigh good.
+
 
 
 
