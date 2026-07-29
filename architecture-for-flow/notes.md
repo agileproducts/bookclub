@@ -69,3 +69,30 @@ Assessing climactic patterns helps to reveal points of potential evolution.
 * **Optimise flow** - the performance of a system is determined by its constraints (see, The Goal)
 * **Design for constant evolution** - Adapting to change should not require constant reorganisation
 
+## Exploring the problem space with Strategic Domain-Driven Design and Wardley Mapping
+
+The core concept of DDD is that to build better software its design must align with the business domain. DDD helps us understand the problem domain before trying to develop the technical solution.
+
+### Subdomains in DDD
+
+#### The core domain
+The essential, business-critical part of an organisation's problem domain. This usually provides most value to users and differentiates the organisation. In Wardley terms solutions for this subdomain will normally be at the genesis or custom-built stage of evolution. But as the domain matures it can evolve towards product or commodity, and the organisation will increasingly find advantage in cost rather than in differentiation.
+
+#### The supporting subdomain
+The supporting subdomain does not provide a competitive advantage and often exists in most similar products and services. It is simpler, non-differentiating, and simpler. If highly customisable or open source solutions are available it may reside at the product stage, but if more specialisation is needed then it becomes custom built, but should not demand high levels of investment.
+
+#### The generic subdomain
+The generic subdomain is uniquitous across many business systems, provide no competitive or differentiating advantage and are not specialised. Solutions for this domain should generally be product or commodity.
+
+### Build or buy decisions with subdomain types and evolution stages
+
+Wardley mapping suggests building custom software for the genesis and custom-built stages, buying for the product stage and outsourcing commodity to utility suppliers.
+
+DDD points toward building for the core domain, buying for the generic domain and the decision for the supporting domain depending on the level of specialisation required.
+
+The difference is that making the decision for a component based purely on the evolutionary stage risks overlooking the degree of business criticality. Over-customising off-the-shelf software brings more risk than may be worth it, even effecrive loss of vendor support. One alternative may be to use productised software only as designed and develop custom software for unsupported use cases - i.e. build and buy.
+
+Evolution stages are about market maturity and user perception rather than who makes them. You could indicate buy versus built on a Wardley map using colours. This helps you assess your choices:
+
+* Are we custom-building components that do not belong to the core domain?
+* Does the level of specialisation justify a custom solution for supporting domains?
