@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #1f2937; }
+      .label { font: 700 16px Arial, sans-serif; fill: #111827; }
+      .text  { font: 500 13px Arial, sans-serif; fill: #111827; }
+      .small { font: 500 12px Arial, sans-serif; fill: #374151; }
+      .card  { rx: 14; ry: 14; stroke: #374151; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="620" fill="#f8fafc"/>
+
+  <text x="550" y="48" text-anchor="middle" class="title">EventStorming Sticky Note Types</text>
+  <text x="550" y="72" text-anchor="middle" class="small">Legend for collaborative modeling sessions</text>
+
+  <!-- Domain Event -->
+  <rect class="card" x="50" y="110" width="300" height="145" fill="#fb923c"/>
+  <text class="label" x="70" y="140">Domain Event (Orange)</text>
+  <text class="text"  x="70" y="168">Order Placed</text>
+  <text class="small" x="70" y="198">Something that happened in the domain.</text>
+  <text class="small" x="70" y="218">Name with past-tense verb.</text>
+
+  <!-- Command -->
+  <rect class="card" x="400" y="110" width="300" height="145" fill="#60a5fa"/>
+  <text class="label" x="420" y="140">Command (Blue)</text>
+  <text class="text"  x="420" y="168">Place Order</text>
+  <text class="small" x="420" y="198">Action requested by a user/system.</text>
+  <text class="small" x="420" y="218">Often triggers one or more events.</text>
+
+  <!-- Policy -->
+  <rect class="card" x="750" y="110" width="300" height="145" fill="#c084fc"/>
+  <text class="label" x="770" y="140">Policy (Purple)</text>
+  <text class="text"  x="770" y="168">When Order Placed, Reserve Stock</text>
+  <text class="small" x="770" y="198">Rule that reacts to events and issues commands.</text>
+
+  <!-- Aggregate -->
+  <rect class="card" x="50" y="290" width="300" height="145" fill="#fcd34d"/>
+  <text class="label" x="70" y="320">Aggregate (Yellow)</text>
+  <text class="text"  x="70" y="348">Order</text>
+  <text class="small" x="70" y="378">Consistency boundary handling commands</text>
+  <text class="small" x="70" y="398">and producing domain events.</text>
+
+  <!-- Read Model -->
+  <rect class="card" x="400" y="290" width="300" height="145" fill="#86efac"/>
+  <text class="label" x="420" y="320">Read Model (Green)</text>
+  <text class="text"  x="420" y="348">Order Summary View</text>
+  <text class="small" x="420" y="378">Projection optimized for queries/UI.</text>
+
+  <!-- External System -->
+  <rect class="card" x="750" y="290" width="300" height="145" fill="#d1d5db"/>
+  <text class="label" x="770" y="320">External System (Gray)</text>
+  <text class="text"  x="770" y="348">Payment Gateway</text>
+  <text class="small" x="770" y="378">Dependency outside your bounded context.</text>
+
+  <!-- Actor -->
+  <rect class="card" x="225" y="470" width="300" height="110" fill="#f9a8d4"/>
+  <text class="label" x="245" y="500">Actor / User (Pink)</text>
+  <text class="text"  x="245" y="528">Customer</text>
+  <text class="small" x="245" y="552">Person or role initiating commands.</text>
+
+  <!-- Hotspot -->
+  <rect class="card" x="575" y="470" width="300" height="110" fill="#ef4444"/>
+  <text class="label" x="595" y="500" fill="#fff">Hotspot / Question (Red)</text>
+  <text class="text"  x="595" y="528" fill="#fff">How to handle failed payment retry?</text>
+  <text class="small" x="595" y="552" fill="#fee2e2">Open issue, risk, or ambiguity.</text>
+</svg>
