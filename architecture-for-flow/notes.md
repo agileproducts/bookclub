@@ -148,3 +148,78 @@ A policy or an actor retreiving information from a read model can issue a comman
 ![EventStorming sticky note types](./eventstorming-sticky-types.svg)
 
 ![EventStorming example](./corporate-travel-eventstorming-flow.svg)
+
+### Domain storytelling
+
+Domain storytelling is another collaborative technique to explore a problem domain. It focuses on telling a domain story from a particular actor's perspective.The actor can be a specific person, a group of people, or a system. It identifies which actors respond to which events and are required to perform which activities on a work object - documents, messages etc.
+
+### Example mapping
+Example mapping provides a structured way to refine the acceptance criteria of user stories. For a given story acceptance critera are captured on blue cards and then illustrated with examples on green cards. For example the acceptance criteria 'Only files in .docx format must be accepted' could be fleshed out with example like 'supplied file is a .docx and is accepted', 'supplied file is a .pdf and is rejected'. A question might arise like 'should we accept a legacy .doc file'? and that can be recorded on a pink note.
+
+### User story mapping
+Story mapping involves describing a user journey across a horizontal axis with key activities at the top. Below each activity step user stories are added, with the most valuable/fundamental at the top and enriching iterations below. Horizontal lines are drawn to identify viable releases.
+
+## Bounded contexts and architectural styles
+Bounded contexts do not dictate a particular architectural style. Key decisions to make are:
+
+* **Monolith or distributed?** If the entire system shares similar architectural characteristics then a monoilth style may be suggested where everything deploys as a unit. Where characterisric differ then a distributed system of independently deployable components may be more appropriate.
+* **Where should data live?** Should data be stored in one database or store, or in multiple? 
+* **How should services communicate?** Synchronously or asynchronously?
+
+Architecture should evolve as systems grow. Some principles from the book _Continuous Architecture in Practice_ are:
+* Architect products - rather than projects
+* Focus on quality attributes - let performance, scalability, security etc drive decisions
+* Delay design decisions until they are absolutely necessary - avoid premature optimisation and overengineering
+* Architect for change - favour small, loosely coupled components
+* Architect for build, test, deploy, operate - early implementation, fast feedback loops
+* Model the organisation of your teams after the design of the system - reverse Conway
+
+Decisions can be recorded as ADRs.
+
+## Bounded contexts and evolution stages
+Bounded contexts can be mapped to their related evolution stage in a Wardley map. Core domains ought to be towards the left, suporting domains to the right of that, likely requiring custom development but with minimal investment. Generic subdomains ought to go in the product/commodity stage to the right.
+
+## High cohesion and loose coupling
+"A structure is stable if the cohesion is strong and the coupling is low". 
+
+Within a bounded context we should have high cohesion, which is achieved when related behaviour sits in one place. When a behavious change is needed, only one context needs changing.
+
+Where different contexts or modules depend on each other the coupling should be loose, so that they are easy to change. Where coupling is tight then changes also become coupled. This is more important for rapidly changing core domains than highly stable generic ones.
+
+## Context maps
+Context maps make change coupling explicit and visible. They consist of descriptive patterns which express different types of relationship. 
+
+**Separate Ways (SW)**. When bounded contexts have no connections to others. In this case no coordination is required, and duplicating functionality may be less expensive than trying to integrate or collaborate.
+
+**Published Language (PL)** A standardised and well documented shared interchange language. The format is published using schemas which implement standards.
+
+**Anticorruption Layer (ACL)** Translates an external upstream model into an internal downstream model, protecting it from foreign concepts or frequent upstream changes.
+
+**Conformist (CF)** The downstream model attached to the upstream model without further transformation. This simplifies integration but increases coupling. Suitable for use when conforming to a stable, well-designed upstream model which it is pointless for the downstream model to alter.
+
+**Open-Host Service (OHS)** Not tailored to a specific client, the OHS exposes a convenient protocol to consumers via a public API.
+
+**Customer Supplier (CS)** The downstream system acts as a customer to the upstream one, specifying needs for upstream to meet. 
+
+**Shared Kernel (SK)** Two or more systems share a subset of threir domain model as a shared artifact or database. Change requires both teams to synchronise, coupling is tight. Desirable when the cost of integrating changes separately is higher than the cost of coordination.
+
+**Partnership (PS)** Teams collaborate to achieve an aligned common goal. This requires a lot of coordination.
+
+**Big Ball of Mud (BBoM)** No clear boundaries and a messy model. Architectural principles either never employed or forgotten.
+
+Context maps can help show implicit dependencies where the relationship between A and B implictly affects C.
+
+Context maps are technology agnostic, they apply whether the communication style is request-response or event-driven, synchronous blocking or asynchronous non-blocking. 
+
+## Change coupling to core domains
+
+Core domains usually change frequently and loose coupling is essential.
+
+* Enable the upstream core to involve independently - avoid exposing the core domain model, use an OHS to provide an external API
+* Protect downstream core from upstream models - an ACL protects business critical systems
+* Avoid conforming to a volatile core - unless there is backward compatibilty
+* Minimise duplication of complex core behaviour - employing SW would require expensive duplication of functionality which requires frequent updates, and this duplication weakens cohesion
+* Minimise competing changes to the core influenced by other teams - customer-supplier relationships mean that downstream systems gain influence over the priorites of the supplier core teams and can lead to competing change requests. If the customer cannot accept changes them the evolution of the core domain becomes blocked.
+* Minimise high communication bandwidth with other teams - if the volatile core domain is involved in partnerships then the coordination cost inhibits development of the domain
+
+
