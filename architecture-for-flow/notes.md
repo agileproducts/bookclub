@@ -222,4 +222,14 @@ Core domains usually change frequently and loose coupling is essential.
 * Minimise competing changes to the core influenced by other teams - customer-supplier relationships mean that downstream systems gain influence over the priorites of the supplier core teams and can lead to competing change requests. If the customer cannot accept changes them the evolution of the core domain becomes blocked.
 * Minimise high communication bandwidth with other teams - if the volatile core domain is involved in partnerships then the coordination cost inhibits development of the domain
 
+## Implementing the domain model with tactical DDD
 
+The building blocks of domain-driven models:
+
+* **Entity:** An object with its own life cycle which can change state over time by mutating values. An entity is defined by it's own unique id.
+* **Value object:** An immutble object which does not declare its own identity, though it may contain the entity for a different type, like an entity object.
+* **Aggregate:** A graph of closely related objects consisting of one or more entities and optionally one of more value objects. One aggregate instance reflects the state of one part of the domain model. The parent entity that composes all other parts of the aggregate is known as the aggregate root and this defines the public interface.
+* **Domain service:** A domain service performs domain specific business logic which is not the responsibility of any one entitu or value object.
+* **Domain event:** A domain event indicates something significant has occurred in a domain model. It's common for an aggregate to be the source of the event. One or more bounded contexts may be interested in the event.
+
+See [explainer](tactical-dd-hexagonal.md) and [code example](tactical-dd-hexagon-code.md)
