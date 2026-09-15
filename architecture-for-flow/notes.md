@@ -159,7 +159,7 @@ Example mapping provides a structured way to refine the acceptance criteria of u
 ### User story mapping
 Story mapping involves describing a user journey across a horizontal axis with key activities at the top. Below each activity step user stories are added, with the most valuable/fundamental at the top and enriching iterations below. Horizontal lines are drawn to identify viable releases.
 
-## Bounded contexts and architectural styles
+### Bounded contexts and architectural styles
 Bounded contexts do not dictate a particular architectural style. Key decisions to make are:
 
 * **Monolith or distributed?** If the entire system shares similar architectural characteristics then a monoilth style may be suggested where everything deploys as a unit. Where characterisric differ then a distributed system of independently deployable components may be more appropriate.
@@ -176,17 +176,17 @@ Architecture should evolve as systems grow. Some principles from the book _Conti
 
 Decisions can be recorded as ADRs.
 
-## Bounded contexts and evolution stages
+### Bounded contexts and evolution stages
 Bounded contexts can be mapped to their related evolution stage in a Wardley map. Core domains ought to be towards the left, suporting domains to the right of that, likely requiring custom development but with minimal investment. Generic subdomains ought to go in the product/commodity stage to the right.
 
-## High cohesion and loose coupling
+### High cohesion and loose coupling
 "A structure is stable if the cohesion is strong and the coupling is low". 
 
 Within a bounded context we should have high cohesion, which is achieved when related behaviour sits in one place. When a behavious change is needed, only one context needs changing.
 
 Where different contexts or modules depend on each other the coupling should be loose, so that they are easy to change. Where coupling is tight then changes also become coupled. This is more important for rapidly changing core domains than highly stable generic ones.
 
-## Context maps
+### Context maps
 Context maps make change coupling explicit and visible. They consist of descriptive patterns which express different types of relationship. 
 
 **Separate Ways (SW)**. When bounded contexts have no connections to others. In this case no coordination is required, and duplicating functionality may be less expensive than trying to integrate or collaborate.
@@ -211,7 +211,7 @@ Context maps can help show implicit dependencies where the relationship between 
 
 Context maps are technology agnostic, they apply whether the communication style is request-response or event-driven, synchronous blocking or asynchronous non-blocking. 
 
-## Change coupling to core domains
+### Change coupling to core domains
 
 Core domains usually change frequently and loose coupling is essential.
 
@@ -233,3 +233,61 @@ The building blocks of domain-driven models:
 * **Domain event:** A domain event indicates something significant has occurred in a domain model. It's common for an aggregate to be the source of the event. One or more bounded contexts may be interested in the event.
 
 See [explainer](tactical-dd-hexagonal.md) and [code example](tactical-dd-hexagon-code.md)
+
+## Optimising for flow with team toplogies
+
+Conway's Law: Any organisation that designs a system will produce a system whose structure reflects that of the org.
+
+An org designed as functional silos will produce a system architecture of functional silos with lots of handoffs and coordination cost.
+
+### Requirements for flow optimisation
+
+* Autonomous cross-functional teams
+* Small long-lived teams
+* Teams own the subsystem for which they are responsible
+* Minimise repeated handovers
+* Minimise cognitive load
+* Minimise high-bandwidth communication
+
+In _Accelerate_ Jez Humble et al show the impact of software delivery performance on organisations. Their DORA (DevOps Research and Assessment) metrics are:
+* Deployment frequency
+* Lead time for change  - from commit to deployment
+* Mean time to restore
+* Change failure rate
+
+[My view here: You can do well on all those things and then not be a successful organisation, there is more to it].
+
+### Cognitive load
+
+The amount of effort used in working memory.
+
+Sweller's Cognitive Load Theory:
+* Intrinsic load - the inherent difficulty of a task itself
+* Extraneous load - the way the task is presented
+* Germane load - the effort of processing the task itself
+
+The higher the extraneous load, the lower the working memory for the intrinsic and the germane. The higher the instrinsic load, the less is left for the germane.
+
+Reducing delivery bottlenecks means optimising cognitive load.
+
+### The fundamental team toplogies
+
+* **Stream-aligned teams**. Aligned to a business domain or capability. This could be a product, a service, a user journey, a persona.
+* **Platform teams**. Support stream-aligned teams in their work by creating consumable systems and products that abstract away parts of the cognitive load for other teams.
+* **Enabling teams**. Temporarily boost skills, their goal is to increase the capabilty and autonomy of stream aligned teams.
+* **Complicated subsystem teams** Support stream-aligned teams by encapsulating areas of highly specialised knowledge.
+
+### Team interaction modes
+
+* **Collaboration** involves teams working very closely together for a limited period of time. High bandwidth, high cost.
+* **X-as-service** consuming or providing with minimal interaction. Low bandwidth, clear boundaries.
+* **Facilitating** helping to remove obsctacles or boost capability. Temporary and focused. 
+
+### Team toplogies and Wardley doctrinal principles
+
+* Thinking in small teams
+* Optimise flow
+* Design for constant evolution
+* Provide purpose, mastery and autonomy
+
+
