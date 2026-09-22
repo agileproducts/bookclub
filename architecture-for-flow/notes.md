@@ -290,4 +290,46 @@ Reducing delivery bottlenecks means optimising cognitive load.
 * Design for constant evolution
 * Provide purpose, mastery and autonomy
 
+## Connecting the dots
+
+### Identifying suitable streams of change
+The activity or task based flow of a Wardley map or user story map can provide good candidates for customer-driven stream aligned teams. 
+
+Ideally teams should own an end-to-end flow. By tracing the value chains in a Wardley map you can analyse the flow of change and identify dependencies which might inform team topology.
+
+### Analysing dependencies
+Types of dependency (from _Making Work Visible_):
+* Architecture - how tight is coupling?
+* Expertise - how much does one team depend on the knowledge of another?
+* Acivity - does a team need someone else to do something in order to move forward?
+
+### Managing dependencies
+Where teams depend on each other the theory of constraints (_The Goal_) says that the constraint teams will determine the performance of the whole.
+
+The five focusing steps from TOC are:
+* Identify the system's constraints
+* Exploit the constraint - make sure you are maximising the output of the constraint steps
+* Subordinate to the constraint - adjust everything else to achieve the above
+* Elevate the constraint - upgrade or change to eliminate the constraint
+* Repeat - if the constraint has been broken, find the next one
+
+Value-stream mapping offers a way to visualise the constraints in a value stream. Large gaps between lead time and cycle time indicate time wasted waiting. Or look for long queues - the constraint will be right after these.
+
+Wardley mapping, DDD and team topologies can all help to exploit and elevate constraints.
+
+### Finding team ownership boundaries
+
+* Teams should be small and have manageable cognitive load
+* A given bounded context should only be owned by one team, but one team may own more than one bounded context
+* The further right on a Wardley map a bounded context is the more predictable it should be, a team may reasonably own more product/commodity components than they could custom or genesis components.
+
+
+
+
+
+
+
+
+
+
 
