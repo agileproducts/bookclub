@@ -357,10 +357,42 @@ Stream aligned teams rely on others to support them in their work. Identify serv
 ### A platform team perspective
 For a platform team, stream-aligned teams can appear as users at the top of the Wardley map and the services required from the platform form the value chain. A PaaS itself may be custom built, with underlyng open source components at the product stage and cloud metal as commodity. If the platform moves more to commodity cloud services those components evolve to the right.
 
+## The Architecture for Flow Canvas
+Bringing Wardley Mapping, DDD and Team Topologies together in a structured way using the [Architecture for Flow Canvas](https://architectureforflow.com/canvas/). 
 
+### Assessing the as-is situation
 
+**Describing the current teams and their way of working**
+* Team structure: What are the current teams and how are they organised?
+* Team sizes: How large are the teams?
+* Current responsibilities and system ownership: Which parts of the system do they currently own?
+* Dependencies: What are the key dependents between teams?
+* Interaction modes: How do the teams currently collaborate?
+* Current practices: What are their current ways of working?
 
+**Assessing the current flow of change**
+Meet teams individually and identify blockers and enablers to flow.
 
+**Visualising the current business landscape**
+Visualise the current business landscape using a Wardley Map. Identify the scope, the users, their needs, the components that fulfil them, their dependencies and position in the value chain. A lot of value comes from doing this as a collaborative exercise.
+
+**Categorise the problem space**
+Evaluate the user needs and classify them as core, supporting or generic domains.
+
+### Designing the envisioned to-be situation
+Shape how teams, architecture and the business landscape should evolve for a fast flow of change.
+
+**Modularising the solution space**
+After categorising the problem space into subdomain types, define/design bounded contexts in the solution space. Several modelling techniques can be used including EventStorming.
+
+**Visualising the future landscape**
+Place the bounded contexts on a to-be Wardley Map. Core subdomains should be priortised for investment. For generic submdomains consider whether existing solutions can be leveraged. For supporting subdomains it depends whether off-the-shelf solutions can offer the necesary level of specialisation. 
+
+**Deriving the future team organisation**
+Apply a team toplogies approach to optimise the system for fast flow. Analyse key drivers of value and change within the organisation - the user needs of a Wardley map are strong candidates. Structure teams around user-facing streams of change. A team may own more than one bounded context, but bounded contexts should not be split between teams. Foundational needs may be provided by platform teams. An enabling team might help if there are capability gaps.
+
+**Identify interaction modes**
+Initially teams are likely to interact as collaborators, but over time this might evolve to x-as-a-service.
 
 
 
