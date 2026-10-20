@@ -323,6 +323,41 @@ Wardley mapping, DDD and team topologies can all help to exploit and elevate con
 * A given bounded context should only be owned by one team, but one team may own more than one bounded context
 * The further right on a Wardley map a bounded context is the more predictable it should be, a team may reasonably own more product/commodity components than they could custom or genesis components.
 
+### The Cynefin framework
+A decision-making framework that classifies situations based on cause and effect.
+
+* **Clear** - The relationship between cause and effect is clear, known knowns. _Best practices_ can be applied. The best way to react is sense-categorize-respond.
+* **Complicated** - The relationship between cause and effect is less clear, requires analysis, known unknowns. React with sense-analyse-respond.
+* **Complex** - The relationship between cause and effect can only be seen in hindsight, unknown unknowns. Only _emergent practices_ exist. react with probe-sense-respond. Experiment, see what happens, adjust.
+* **Chaotic** - There is no connection between cause and effect. Act-sense-respond. take action to establish order, then adjust to turn it into a complex situation using _novel practices_.
+* **Disorder** - If the situation cannot be clearly classified it is in disorder, you can only gather information.
+
+With increasing knowledge domains can evolve in the direction of clarity.
+
+They can be mapped to Wardley stages:
+* Clear -> commodity -> best practices
+* Complicated -> product -> good practices
+* Complex -> custom built -> emergent practices
+* Chaotic -> genesis -> novel practices
+
+The less clear a domain, the higher the cognitive load. For complicated and complex domains a team should not own more than one.
+
+### Explore-expand-extract
+3X model invented by Kent Beck.
+
+* **Explore** - Discover a viable product idea through exploration, asking questions. 
+* **Expand** - Incrementally build and improve on the initial experiment. Eliminate bottlenecks to growth.
+* **Extract** - Optimise costs and make the product sustainable.
+
+### Identify services supporting flow of change
+Stream aligned teams rely on others to support them in their work. Identify services that can form x-as-a-service interactions. The value chain component of Wardley mapping helps with this.
+
+## Visualising team perspectives with Wardley maps
+
+### A platform team perspective
+For a platform team, stream-aligned teams can appear as users at the top of the Wardley map and the services required from the platform form the value chain. A PaaS itself may be custom built, with underlyng open source components at the product stage and cloud metal as commodity. If the platform moves more to commodity cloud services those components evolve to the right.
+
+
 
 
 
